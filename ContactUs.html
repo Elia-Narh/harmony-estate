@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Harmony Estate - Get in touch with us for your luxury real estate needs in East Legon.">
+    <title>Contact Us | Harmony Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/harmonylogo3.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C3E50',
+                        secondary: '#E74C3C',
+                        accent: '#3498DB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Add AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .backdrop-blur-nav {
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+            }
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+            .hover-scale:hover {
+                transform: scale(1.05);
+            }
+            .input-focus {
+                transition: all 0.3s ease;
+            }
+            .input-focus:focus {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
+            .form-bg {
+                background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation with transparency -->
+    <header class="bg-white/80 backdrop-blur-nav shadow-md fixed w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="harmonyEstate.html" class="flex items-center">
+                        <img src="images/harmonylogo3.png" alt="Harmony Estate Logo" class="h-12 w-auto">
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="harmonyEstate.html" class="text-primary hover:text-secondary transition-colors">Home</a>
+                    <div class="relative group">
+                        <a href="Aboutus.html" class="text-primary hover:text-secondary transition-colors">
+                            About Us <i class="fa fa-caret-down ml-1"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg py-2 mt-2">
+                            <a href="Aboutus.html#testimonials" class="block px-4 py-2 hover:bg-gray-100">Testimonials</a>
+                            <a href="Aboutus.html#our-story" class="block px-4 py-2 hover:bg-gray-100">Our Story</a>
+                            <a href="Aboutus.html#team" class="block px-4 py-2 hover:bg-gray-100">Our Team</a>
+                        </div>
+                    </div>
+                    <a href="harmonyEstate.html#properties" class="text-primary hover:text-secondary transition-colors">Properties</a>
+                    <a href="#contactus" class="text-primary hover:text-secondary transition-colors">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" aria-label="Toggle Menu">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="hidden md:hidden mt-4 pb-4">
+                <a href="harmonyEstate.html" class="block py-2 text-primary hover:text-secondary">Home</a>
+                <a href="Aboutus.html" class="block py-2 text-primary hover:text-secondary">About Us</a>
+                <a href="harmonyEstate.html#properties" class="block py-2 text-primary hover:text-secondary">Properties</a>
+                <a href="#contactus" class="block py-2 text-primary hover:text-secondary">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section with enhanced design -->
+        <section class="bg-primary py-20 text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('images/pattern.png')] opacity-10"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-center" data-aos="fade-down">Contact Us</h1>
+                <p class="text-xl text-center mt-4 text-gray-300" data-aos="fade-up" data-aos-delay="200">
+                    Get in Touch with Our Real Estate Experts
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section with animations -->
+        <section class="py-20 relative">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto" data-aos="fade-up">
+                    <h2 class="text-3xl font-bold text-primary mb-8 text-center">Send Us a Message</h2>
+                    <form action="submit_form.php" method="POST" 
+                          class="space-y-6 bg-white rounded-lg shadow-lg p-8 hover-scale">
+                        <div data-aos="fade-up" data-aos-delay="100">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg input-focus 
+                                          focus:ring-2 focus:ring-secondary focus:border-transparent">
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="200">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg input-focus 
+                                          focus:ring-2 focus:ring-secondary focus:border-transparent">
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="300">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="4" required
+                                      class="w-full px-4 py-2 border border-gray-300 rounded-lg input-focus 
+                                             focus:ring-2 focus:ring-secondary focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" data-aos="fade-up" data-aos-delay="400"
+                                class="w-full bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-6 
+                                       rounded-lg transition-all hover:transform hover:scale-105 hover:shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information with animations -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 bg-white rounded-lg shadow-lg hover-scale" 
+                         data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa fa-phone text-4xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Call Us</h3>
+                        <div class="space-y-2">
+                            <a href="tel:+233557869504" class="block text-gray-600 hover:text-secondary">
+                                +233 557 869 504
+                            </a>
+                            <a href="tel:+233248411155" class="block text-gray-600 hover:text-secondary">
+                                +233 248 411 155
+                            </a>
+                            <a href="tel:+233557009504" class="block text-gray-600 hover:text-secondary">
+                                +233 557 009 504
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-lg shadow-lg hover-scale" 
+                         data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa fa-envelope text-4xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Email Us</h3>
+                        <div class="space-y-2">
+                            <a href="mailto:info@harmonyestate.com" class="block text-gray-600 hover:text-secondary">
+                                info@harmonyestate.com
+                            </a>
+                            <a href="mailto:sales@harmonyestate.com" class="block text-gray-600 hover:text-secondary">
+                                sales@harmonyestate.com
+                            </a>
+                            <a href="mailto:support@harmonyestate.com" class="block text-gray-600 hover:text-secondary">
+                                support@harmonyestate.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-lg shadow-lg hover-scale" 
+                         data-aos="fade-up" data-aos-delay="300">
+                        <i class="fa fa-map-marker text-4xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Visit Us</h3>
+                        <address class="text-gray-600 not-italic">
+                            East Legon<br>
+                            Ashford Street<br>
+                            GN-0785, Accra<br>
+                            Ghana
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section with animation -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.5551459235144!2d-0.1277589!3d5.6342415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9c7ebaeabe93%3A0x5b3c0ef64d9e5e8a!2sEast%20Legon%2C%20Accra!5e0!3m2!1sen!2sgh!4v1234567890"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="text-center">
+                <img src="images/harmonylogo3.png" alt="Harmony Estate Logo" 
+                     class="h-12 w-auto mx-auto mb-4">
+                <h3 class="text-xl font-bold mb-2">HARMONY ESTATE Ltd</h3>
+                <p class="text-gray-300">Luxurious Homes For Everyone</p>
+                <div class="flex justify-center space-x-4 mt-6">
+                    <a href="https://www.facebook.com" class="text-gray-300 hover:text-white">
+                        <i class="fa fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="text-gray-300 hover:text-white">
+                        <i class="fa fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://wa.me/557869504" class="text-gray-300 hover:text-white">
+                        <i class="fa fa-whatsapp text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700">
+            <div class="container mx-auto px-4 py-6">
+                <p class="text-center text-gray-300">
+                    &copy; 2024 Harmony Estate Ltd. All rights reserved. Designed by 
+                    <a href="#" class="text-secondary hover:text-secondary/80">Narhbi Elia</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // Transparent header on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('bg-white/95');
+                header.classList.remove('bg-white/80');
+            } else {
+                header.classList.add('bg-white/80');
+                header.classList.remove('bg-white/95');
+            }
+        });
+
+        // Form validation and animation
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add loading state
+            const button = form.querySelector('button');
+            button.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i> Sending...';
+            button.disabled = true;
+            
+            // Simulate form submission (replace with actual form submission)
+            setTimeout(() => {
+                button.innerHTML = '<i class="fa fa-check mr-2"></i> Message Sent!';
+                button.classList.add('bg-green-500');
+                setTimeout(() => {
+                    button.innerHTML = 'Send Message';
+                    button.classList.remove('bg-green-500');
+                    button.disabled = false;
+                    form.reset();
+                }, 2000);
+            }, 2000);
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.md\\:hidden').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
